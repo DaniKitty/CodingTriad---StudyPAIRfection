@@ -7,7 +7,7 @@
 **DATE:** 19/4/2024
 
 
-**AUTHORS:** Danica Rachel Benjamin, Hagan Ernest Pereira
+**AUTHORS:** Danica Rachel Benjamin, Hagan Ernest Pereira, Benita Jennifer
 
 
 **CODE USED:** HTML, CSS
