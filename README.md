@@ -10,4 +10,4 @@
 **AUTHORS:** Danica Rachel Benjamin, Hagan Ernest Pereira, Benita Jennifer
 
 
-**CODE USED:** HTML, CSS
+**CODE USED:** HTML, CSS, PHP
