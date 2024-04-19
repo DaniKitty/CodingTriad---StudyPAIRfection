@@ -52,25 +52,24 @@
     <body>
         <div class="signup-container">
             <h2>Sign-up</h2>
-        <form action = "thank_you.html" method ="POST">
+        <form action = "insert.php" method ="POST">
             <table>
                 <tr>
-                    <td>Name:</td>
-                    <td><input type ="text" name ="username" required></td>
+                    <td><input type ="text" name ="username" placeholder= "Username" required></td>
                 </tr>
                 <tr>
-                    <td>Age: </td>
-                    <td><input type="text" name="age" required></td>
+                    <td><input type = "password" name = "password" placeholder="Password" required></td>
                 </tr>
                 <tr>
-                    <td>Email: </td>
-                    <td><input type="email" name ="email" required></td>
+                    <td><input type="text" name="age" placeholder="Age"required></td>
                 </tr>
                 <tr>
-                    <td>Subjects: </td>
+                    <td><input type="email" name ="email" placeholder="Email"required></td>
+                </tr>
+                <tr>
                     <td>
-                        <select name = "Subjects" required >
-                            <option selected hidden value = " ">Pick subject preference</option>
+                        <select name = "subjects" placeholder="subjects" required >
+                            <option selected hidden value = " ">Pick Preferred Subject</option>
                             <option value = "English">English</option>
                             <option value = "Physics">Physics</option>
                             <option value = "Chemistry">Chemistry</option>
@@ -78,11 +77,19 @@
                             <option value = "Math">Math</option>
                             <option value = "Computer science">Computer science</option>
                         </select>
-                    
                     </td>
                 </tr>
                 <tr>
-                    <td><input type = "submit" value = "submit"></td>
+                    <td>
+                        <select name = "moc" placeholder = "Mode Of Communication/Study sessions" required>
+                            <option selected hidden value = " ">Pick Preferred Mode of Communication</option>
+                            <option value = "Audio call">Audio call</option>
+                            <option value = "Video call">Video call</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type = "submit" value = "Submit"></td>
                 </tr>
             </table>
         </form>
