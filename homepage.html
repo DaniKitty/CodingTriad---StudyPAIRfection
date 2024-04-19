@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icon.png">
-    <title>StudyPAIRfection</title>
-</head>
-<body>
-    <header style="display: flex;">
-        <img src="icon.png" alt="Icon" style="width: 10%;">
-        <h1>StudyPAIRfection</h1>
-    </header>
-    <div>
-        <h1>  </h1>
-    </div>
+    <head>
+        <meta charset="utf-8" />
+        <title>StudyPAIRfection - Homepage</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header style="display: flex;">
+            <img src="icon.png" alt="Icon" style="width: 10%;">
+            <h1>StudyPAIRfection</h1>
+        </header>
+        <div style="align-items: right; background-color: rgb(252, 240, 255);">
+            <button type="button" id="message">
+                <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            </button>
+        </div>
+        <script>
+            const message = document.getElementById("message");
+            message.addEventListener("click", function() {
+                window.location.href = "message.php";
+            });
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
-</body>
 </html>
