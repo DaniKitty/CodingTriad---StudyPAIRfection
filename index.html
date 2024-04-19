@@ -3,6 +3,7 @@
     <head> 
         <title> StudyPAIRfection </title>
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="icon.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
@@ -12,9 +13,12 @@
         </style>
     </head>
     <body>
-        <button type="button" id="signup">Sign Up</button>
-        <button type="button" id="login">Log in</button>
+        <div style="align-items: right; background-color: rgb(252, 240, 255);">
+            <button type="button" id="signup">Sign Up</button>
+            <button type="button" id="login">Log in</button>
+        </div>
         <header>
+            <img src="icon.png" alt="Icon" style="width: 250px;">
             <h1>StudyPAIRfection</h1>
             <p>Get Your Perfect Study Buddy</p>
         </header>
@@ -22,7 +26,11 @@
         <script>
             const signup = document.getElementById("signup");
             signup.addEventListener("click", function() {
-                window.location.href = "signup.html";
+                window.location.href = "form.html";
+            });
+            const login = document.getElementById("login");
+            login.addEventListener("click", function() {
+                window.location.href = "login.html";
             });
         </script>
     </body>
