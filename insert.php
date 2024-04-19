@@ -1,14 +1,16 @@
 <?php
 $username = $_POST['username'];
+$pw = $_POST['password'];
 $age = $_POST['age'];
 $email = $_POST['email'];
 $subjects = $_POST['subjects'];
-echo $username;
-echo $age;
-echo $email;
-echo $subjects;
-if(!empty($username)|| !empty($age)|| !empty($email)|| !empty($subjects)){
-   
+$moc = $_POST['moc'];
+if(!empty($username)||!empty($pw)|| !empty($age)|| !empty($email)|| !empty($subjects) || !empty($moc)){
+   $host = "localhost";
+   $dbUsername = "root";
+   $dbPassword = "";
+   $dbname = "studybuddy";
+
    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
 
    if(mysqli_connect_error()){
@@ -16,7 +18,7 @@ if(!empty($username)|| !empty($age)|| !empty($email)|| !empty($subjects)){
    }
    else{
     $SELECT = "SELECT email From student Where email = ? Limit 1";
-    $INSERT = "INSERT Into student(username, age, email, subjects) values(?, ?, ?, ?)";
+    $INSERT = "INSERT Into student(username, pw, age, email, subjects, moc) values(?, ?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($SELECT);
     $stmt->bind_param("s", $email);
@@ -29,9 +31,10 @@ if(!empty($username)|| !empty($age)|| !empty($email)|| !empty($subjects)){
         $stmt->close();
 
         $stmt = $conn->prepare($INSERT);
-        $stmt->bind_param("siss", $username, $age, $email, $subjects);
+        $stmt->bind_param("ssisss", $username, $pw, $age, $email, $subjects, $moc);
         $stmt->execute();
-        echo "New record inserted successfully";
+        header('Location: login-form.html');
+        exit;
     }
     else{
         echo "Someone already registered with these credentials";
