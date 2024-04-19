@@ -1,1 +1,6 @@
-header{text-align: center;}
+header {
+    text-align: center;
+}
+button#signup {
+    background-color: greenyellow;
+}
