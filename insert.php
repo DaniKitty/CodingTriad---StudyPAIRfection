@@ -7,7 +7,6 @@ echo $username;
 echo $password;
 echo $email;
 echo $Subjects;
-/*
 if(!empty($username)|| !empty($password)|| !empty($email)|| !empty($subjects)){
    $host = "192.168.1.13";
    $dbUsername = "studybuddynew";
@@ -49,5 +48,4 @@ else{
     echo "All field are required";
     die();
 }
-*/
 ?>
