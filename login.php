@@ -2,7 +2,7 @@
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$con = new mysqli("localhost", "root","", "studybuddy");
+$con = new mysqli("192.168.1.13", "studybuddynew","studybuddynew", "studybuddynew");
 if($con->connect_error){
     die("Failed to connect: ".$con->connect_error);
 }
@@ -14,7 +14,7 @@ else{
     if($stmt_result->num_rows>0){
         $data = $stmt_result->fetch_assoc();
         if($data['pw']===$password){
-            header('Location: homepage.html');
+            header('Location: homepage.php?username='.$email);
             exit;
         }
         else{
@@ -22,4 +22,3 @@ else{
         }
     }
 }
-?>
