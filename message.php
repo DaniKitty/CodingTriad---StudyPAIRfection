@@ -7,7 +7,7 @@ if(isset($_GET['logout'])){
     file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
 	
 	session_destroy();
-	header("Location: index.php"); //Redirect the user 
+	header("Location: message.php"); //Redirect the user 
 }
 if(isset($_POST['enter'])){
     if($_POST['name'] != ""){
@@ -21,7 +21,7 @@ function loginForm(){
     echo 
     '<div id="loginform"> 
 <p>Enter username:</p> 
-<form action="index.php" method="post"> 
+<form action="message.php" method="post"> 
 <label for="name">Username:-</label> 
 <input type="text" name="name" id="name" /> 
 <input type="submit" name="enter" id="enter" value="Enter" /> 
@@ -94,7 +94,7 @@ function loginForm(){
                 $("#exit").click(function () {
                     var exit = confirm("Do you want to end the chat session?");
                     if (exit == true) {
-                    window.location = "index.php?logout=true";
+                    window.location = "message.php?logout=true";
                     }
                 });
             });
