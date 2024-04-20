@@ -24,9 +24,9 @@
         .login-container h2 {
             text-align: center;
         }
-        .login-form input[type="text"],
+        .login-form input[type="email"],
         .login-form input[type="password"] {
-            width: 100%;
+            width: 95%;
             padding: 10px;
             margin: 10px 0px;
             border: 1px solid #ccc;
@@ -48,10 +48,15 @@
     </style>
 </head>
 <body>
+    <header>
+        <img src="icon.png" alt="Icon" style="width: 250px;">
+        <h1>StudyPAIRfection</h1>
+        <p>Get Your Perfect Study Buddy</p>
+    </header>
     <div class="login-container">
         <h2>Login</h2>
         <form class="login-form" action="login.php" method="post">
-            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
