@@ -8,3 +8,17 @@ header {
 button#signup {
     background-color: rgb(137, 211, 26);
 }
+#message{
+    height: 20px;
+    width: 50px;
+    background-color: orange;
+    border: none;
+}
+#message:hover{
+    background-color: orangered;
+    cursor: pointer;
+}
+.chat{
+    display: block;
+    padding: 100px;
+}
