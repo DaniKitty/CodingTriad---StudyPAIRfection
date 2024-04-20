@@ -6,10 +6,10 @@ $email = $_POST['email'];
 $subjects = $_POST['subjects'];
 $moc = $_POST['moc'];
 if(!empty($username)||!empty($pw)|| !empty($age)|| !empty($email)|| !empty($subjects) || !empty($moc)){
-   $host = "localhost";
-   $dbUsername = "root";
-   $dbPassword = "";
-   $dbname = "studybuddy";
+   $host = "192.168.1.13";
+   $dbUsername = "studybuddynew";
+   $dbPassword = "studybuddynew";
+   $dbname = "studybuddynew";
 
    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
 
